@@ -1,5 +1,6 @@
 # Ecoleta
 Projeto realizado para estudo da linguagem javascript, utilizada no front e back.
+[![CodeFactor](https://www.codefactor.io/repository/github/jeydev10/ecoleta/badge)](https://www.codefactor.io/repository/github/jeydev10/ecoleta)
 
 
 
