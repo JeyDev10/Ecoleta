@@ -1,0 +1,112 @@
+{% extends "layout-pattern.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" href="styles/main-style-cadastro.css">
+<link rel="stylesheet" type="text/css" href="styles/mediaquery-cadastro.css"> {% endblock styles %} {% block title %}
+<title>Cadastrar ponto</title>
+{% endblock title %} {% block content%} {% include "partials/header.html" %}
+
+
+<main>
+    <div class="container-form">
+
+        <h1>Cadastro do ponto de coleta</h1>
+
+        <form action="/saveresults" method="POST">
+            <fieldset>
+                <legend>
+                    <h2>Dados da entidade</h2>
+                </legend>
+                <div class="field-group">
+                    <div class="field">
+                        <label for="name">Nome da identidade</label>
+                        <input type="text" name="nome" required>
+                    </div>
+                    <div class="field">
+                        <label for="image">URL da imagem</label>
+                        <input type="text" name="image" placeholder="https://imagens.com.br/imagem" required>
+                    </div>
+                </div>
+
+                <div class="field-group">
+                    <div class="field">
+                        <label for="adress">Endereço</label>
+                        <input type="text" name="adress" required>
+                    </div>
+                    <div class="field">
+                        <label for="adress2">Número</label>
+                        <input type="text" name="adress2" required>
+                    </div>
+
+                </div>
+
+                <div class="field-group ">
+                    <div class="field">
+                        <label for="uf">Estado</label>
+                        <select name="uf" required>
+                                <option value="">Selecione um estado</option>
+                            </select>
+                        <input type="hidden" name="state">
+                    </div>
+
+                    <div class="field">
+                        <label for="city">Cidade</label>
+                        <select name="city" disabled required>
+                                <option value="">Selecione uma cidade</option>
+                            </select>
+                    </div>
+
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>
+                    <h2>Ítens de coleta</h2>
+                </legend>
+
+                <div class="container-items">
+                    <ul class="items-group">
+                        <li data-id="Lâmapadas">
+                            <img src="icons/lampadas.svg" alt="Lâmpadas">
+                            <span>Lâmapadas</span>
+                        </li>
+                        <li data-id="Pilhas e Baterias">
+                            <img src="icons/baterias.svg" alt="Pilhas e baterias">
+                            <span>Pilhas e Baterias</span>
+                        </li>
+                        <li data-id="Papéis e papelão">
+                            <img src="icons/papeis-papelao.svg" alt="Papéis e papelão">
+                            <span>Papéis e papelão</span>
+                        </li>
+                        <li data-id="Resíduos Eletrônicos">
+                            <img src="icons/eletronicos.svg" alt="Resíduos Eletrônicos">
+                            <span>Resíduos Eletrônicos</span>
+                        </li>
+                        <li data-id="Resíduos Orgânicos">
+                            <img src="icons/organicos.svg" alt="Resíduos orgânicos">
+                            <span>Resíduos Orgânicos</span>
+                        </li>
+                        <li data-id="Óleo de cozinha">
+                            <img src="icons/oleo.svg" alt="óleo de cozinha">
+                            <span>Óleo de cozinha</span>
+                        </li>
+
+                    </ul>
+                    <input type="hidden" name="items">
+                </div>
+            </fieldset>
+
+            <button type="submit">Confirmar Cadastro</button>
+        </form>
+
+    </div>
+
+    {% if concluded %} {% include "partials/modal-register.html"%}
+
+    <script src="script/modal-register.js"></script>
+    {% endif %}
+
+
+
+</main>
+
+<script src="script/cadastro.js"></script>
+{% endblock content%}

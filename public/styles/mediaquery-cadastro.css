@@ -1,0 +1,35 @@
+@media(max-width:850px) {
+    .content-head div {
+        width: 45%;
+    }
+    .logo img {
+        width: 60%;
+    }
+    #back-button a img {
+        width: 10%;
+    }
+    div a {
+        font-size: .8em;
+    }
+    .container-form {
+        width: 100%;
+        padding: 20px;
+    }
+    .field-group {
+        flex-flow: column;
+        width: 100%;
+        padding: 30px;
+        margin: 5px 0;
+    }
+    form .field {
+        margin-bottom: 5px;
+    }
+    .field-group .field+.field {
+        margin-left: 0;
+    }
+    .items-group {
+        width: 100%;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+}

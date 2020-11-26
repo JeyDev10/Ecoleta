@@ -1,0 +1,44 @@
+{% extends "layout-pattern.html" %} {% block styles %}
+<link rel="stylesheet" type="text/css" href="styles/main-style-home.css">
+<link rel="stylesheet" type="text/css" href="styles/mediaquery-home.css"> {% endblock styles %} {% block title %}
+<title>Ecoleta</title>
+{% endblock title %} {% block content %}
+<header>
+    <div class="content-head">
+        <h1>
+            <a href="/"><img src="icons/logo.svg" alt="Seta"></a>
+        </h1>
+
+        <a href="/cadastrar-ponto"><img src="icons/log-in.svg" alt="Logo da Ecoleta">Cadastre um ponto de coleta</a>
+    </div>
+
+</header>
+
+<main>
+    <div class="main-container">
+        <div class="main-content">
+            <h2>Seu marketplace de coleta de resíduos.</h2>
+            <p><strong>Ajudamos pessoas a encontrarem pontos de coleta de forma eficiente.</strong></p>
+            <a href="#" id="search-button">
+                <div class="container-img">
+                    <img src="icons/search.svg" alt="Lupa">
+                </div>
+                Pesquisar pontos de coleta
+            </a>
+        </div>
+    </div>
+</main>
+
+<footer>
+    <p>JeyDev &copy;</p>
+</footer>
+
+{%include "partials/modal.html"%}
+
+
+<script src="script/home.js"></script>
+
+
+
+
+{% endblock content %}

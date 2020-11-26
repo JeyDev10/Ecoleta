@@ -1,0 +1,23 @@
+@media(max-width:540px) {
+    .content-head div {
+        width: 45%;
+    }
+    .logo img {
+        width: 60%;
+    }
+    #back-button a img {
+        width: 10%;
+    }
+    div a {
+        font-size: .8em;
+    }
+    .card-container {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media(max-width:410px) {
+    .card-container {
+        grid-template-columns: 1fr;
+    }
+}

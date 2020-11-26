@@ -1,0 +1,16 @@
+* {
+    box-sizing: border-box;
+    color: white;
+    font-family: Roboto;
+    margin: 0;
+}
+
+:root {
+    --roxo-button: #18151d;
+    --roxoclaro-button: #29262f;
+    --verde-ecoleta: #34CB79;
+}
+
+body {
+    background-color: #201c25;
+}
